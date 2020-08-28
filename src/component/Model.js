@@ -39,7 +39,7 @@ export class Model extends Component {
     let arrayEnd = [];
     let arrayStart = [];
     datafile.members.map((del) =>
-      del.activity_periods.map((info) => {
+      del.activity_periods.forEach((info) => {
         let startTime = Date.parse(info.start_time);
         let endTime = Date.parse(info.end_time);
         if (this.props.id === del.id) {
